@@ -11,6 +11,11 @@ block content
         each val, key in items
           - item_description = `${item_description} ${key}: ${val}`
           br
-        div(class='col-sm-2') #{item_description}
+        div(class='col-sm-2' type = 'button' onclick = 'buy()') #{item_description}
         - item_num = item_num + 1;
+    br
+    script.
+        function buy(){
+            alert("You purchased an item!")
+        }
         
